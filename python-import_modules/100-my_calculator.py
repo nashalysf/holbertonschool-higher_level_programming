@@ -2,7 +2,7 @@
 
 if __name__ == "__main__":
     # ask the user to enter two values and store them in variables
-    num1, op, num2 = input("Calculator: ").split()
+    num1, op, num2 = input().split()
 
     # convert user input(str) into int
     num1 = int(num1)
