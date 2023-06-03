@@ -9,7 +9,7 @@ else:
 
 end = ''
 
-if last_digit < 5:
+if last_digit > 5:
     end = "and is greater than 5"
 elif last_digit == 0:
     end = "and is zero"
