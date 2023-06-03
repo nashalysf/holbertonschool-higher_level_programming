@@ -4,3 +4,4 @@ def uppercase(str):
         chr = ord(c)
         if (chr >= 65) and (chr <= 90):
             print("{:c}".format(chr), end='')
+    print()
