@@ -7,7 +7,7 @@ Python OOP: classes
 
 class Square:
     """class that defines a square
-    Attributes: 
+    Attributes:
         size: size of square
     """
 
@@ -16,6 +16,7 @@ class Square:
         Args:
             size private instance size
         """
+
         self.__size = size
         self.__position = position
 
@@ -25,11 +26,13 @@ class Square:
         Returns:
             size of square
         """
+
         return self.__size
 
     @property
     def position(self):
-        "retrieves position"
+        """retrieves position"""
+
         return self.__position
 
     @size.setter
@@ -38,6 +41,7 @@ class Square:
             Args:
                 value: size to set attribute to
         """
+
         if type(value) is not int:
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -48,6 +52,7 @@ class Square:
     @position.setter
     def position(self, value):
         """sets position value"""
+
         if value is not tuple or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif type(value[0]) is not int:
@@ -61,11 +66,13 @@ class Square:
             Returns:
                 square ** 2
         """
+
         return self.__size ** 2
 
     def my_print(self):
         """Prints stdout the square size in #
         """
+
         if self.__size == 0:
             print()
         else:
