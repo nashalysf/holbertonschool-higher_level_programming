@@ -36,7 +36,9 @@ class Rectangle:
         """SETTER: sets width of rectangle"""
         if value is not int:
             raise TypeError("width must be an integer")
-        elif value < 0:
+        elif value[0] < 0:
+            raise ValueError("width must be >= 0")
+        elif value[1] < 0:
             raise ValueError("width must be >= 0")
         else:
             self._width = value
@@ -46,7 +48,9 @@ class Rectangle:
         """SETTER: sets height of rectangle"""
         if value is not int:
             raise TypeError("height must be an integer")
-        elif value < 0:
+        elif value[0] < 0:
+            raise ValueError("height must be >= 0")
+        elif value[1] < 0:
             raise ValueError("height must be >= 0")
         else:
             self._height = value
