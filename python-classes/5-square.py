@@ -26,10 +26,6 @@ class Square:
         """size method that sets value as attribute
             Args:
                 value: size to set attribute to
-
-            Raises:
-                TypeError: Exception if size is not an integer
-                ValueError: Exception if size is less than 0
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -41,6 +37,17 @@ class Square:
     def area(self):
         """Calculate area of square
             Returns:
-            square ** 2
+                square ** 2
         """
         return self.__size ** 2
+
+    def my_print(self):
+        """Prints stdout the square size in #
+        """
+        if self.__size == 0:
+            print()
+        else:
+            for i in range(self.__size):
+                for j in range(self.__size):
+                    print("#", end="")
+                print()

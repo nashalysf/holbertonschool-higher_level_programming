@@ -9,7 +9,7 @@ class Square:
     def __init__(self, size=0):
         """init method for square
         Args:
-            size private instance size
+            size: private instance size
         Raises:
             TypeError: exception if size is not an int
             ValueError: exception if size < 0
@@ -24,6 +24,6 @@ class Square:
     def area(self):
         """Calculate area of square
             Returns:
-            square ** 2
+                square / ** 2
         """
         return self.__size ** 2
