@@ -8,7 +8,7 @@ Python OOP: classes
 class Square:
 
     """class that defines a square
-    Attributes: 
+    Attributes:
         size: size of square
     """
 
