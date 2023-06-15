@@ -3,7 +3,10 @@
 """
 Python OOP: classes
 """
+
+
 class Square:
+
     """class that defines a square
     Attributes: 
         size: size of square
@@ -12,6 +15,7 @@ class Square:
     def __init__(self, size):
         """init method for square
         Args:
-            private instance size
+        private instance size
         """
+
         self.__size = size
