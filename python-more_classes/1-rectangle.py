@@ -18,18 +18,18 @@ class Rectangle:
             width (_type_): _description_
         """
 
-        self._width = width
-        self._height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
         """GETTER: retrieves width of rectangle"""
-        return self._width
+        return self.__width
 
     @property
     def height(self):
         """GETTER: retrieves height of rectangle"""
-        return self._height
+        return self.__height
 
     @width.setter
     def width(self, value):
@@ -40,8 +40,8 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         elif value[1] < 0:
             raise ValueError("width must be >= 0")
-        else:
-            self._width = value
+
+        self.__width = value
 
     @height.setter
     def height(self, value):
@@ -52,5 +52,5 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         elif value[1] < 0:
             raise ValueError("height must be >= 0")
-        else:
-            self._height = value
+
+        self.__height = value
