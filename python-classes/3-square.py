@@ -3,9 +3,11 @@
 """
 Python OOP: classes
 """
+
+
 class Square:
     """class that defines a square
-    Attributes: 
+    Attributes:
         size: size of square
     """
 
@@ -17,6 +19,7 @@ class Square:
             TypeError: exception if size is not an int
             ValueError: exception if size < 0
         """
+
         if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
@@ -29,4 +32,5 @@ class Square:
             Returns:
                 square / ** 2
         """
+
         return self.__size ** 2
