@@ -107,6 +107,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
-        __height = size
-        __width = size
+        else:
+            __height = size
+            __width = size
         return cls(__height, __width)
