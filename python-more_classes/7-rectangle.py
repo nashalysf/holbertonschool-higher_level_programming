@@ -12,6 +12,7 @@ class Rectangle:
         height: height of rectangle
     """
     number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, width=0, height=0):
         """_summary_
@@ -73,9 +74,9 @@ class Rectangle:
             string = ""
             for i in range(self.__height):
                 if i == self.__height - 1:
-                    string += self.__width * 'C'
+                    string += self.__width * str(self.print_symbol)
                 else:
-                    string += self.__width * 'C' + '\n'
+                    string += self.__width * str(self.print_symbol) + '\n'
             return string
 
     def __repr__(self):
