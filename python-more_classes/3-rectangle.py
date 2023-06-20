@@ -70,8 +70,9 @@ class Rectangle:
         else:
             str = ""
             for i in range(self.__height):
-                if i == self.__height - 1:
-                    str += self.__width * '#'
-                else:
-                    str += self.__width * '#' + '\n'
+                for x in range(self.__width):
+                    if i == self.__height - 1:
+                        str += self.__width * '#'
+                    else:
+                        str += self.__width * '#' + '\n'
                 return str
