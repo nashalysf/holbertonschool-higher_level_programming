@@ -68,14 +68,13 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
-            str = ""
+            string = ""
             for i in range(self.__height):
-                for x in range(self.__width):
-                    if i == self.__height - 1:
-                        str += self.__width * '#'
-                    else:
-                        str += self.__width * '#' + '\n'
-                return str
+                if i == self.__height - 1:
+                    string += self.__width * '#'
+                else:
+                    string += self.__width * '#' + '\n'
+            return string
 
     def __repr__(self):
         """Returns a string representation printable"""
