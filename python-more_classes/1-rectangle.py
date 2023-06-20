@@ -6,7 +6,7 @@ Python OOP: more classes
 
 
 class Rectangle:
-    """Empty Rectangle class
+    """Rectangle class
     Attributes:
         width: width of rectangle
     """
