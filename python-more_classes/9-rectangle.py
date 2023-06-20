@@ -103,6 +103,10 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """returns new rectangle instance"""
+        if size is not int:
+            raise TypeError("width must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
         __height = size
         __width = size
         return cls(__height, __width)
