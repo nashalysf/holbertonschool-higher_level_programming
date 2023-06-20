@@ -73,9 +73,9 @@ class Rectangle:
             string = ""
             for i in range(self.__height):
                 if i == self.__height - 1:
-                    string += self.__width * '#'
+                    string += self.__width * 'C'
                 else:
-                    string += self.__width * '#' + '\n'
+                    string += self.__width * 'C' + '\n'
             return string
 
     def __repr__(self):
