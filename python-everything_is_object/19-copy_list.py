@@ -1,4 +1,3 @@
-#!/usr/bin/python3
-def copy_list(a_list):
-    cp = a_list[:]
-    return cp
+#!/usr/bin/python3i
+def copy_list(cp):
+    return cp[:]
