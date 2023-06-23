@@ -1,0 +1,21 @@
+============================
+
+Using ``BaseGeometry``
+---------------------
+
+Function to test:
+	area(self)
+	integer_validator
+--------------------
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+'first elmn str - second elmn int'
+>>> base_instance = BaseGeometry()
+>>> base_instance.integer_validator("eleven", 11)
+
+'empty'
+>>> base_instance = BaseGeometry()
+>>> base_instance.integer_validator("")
+...
+TypeError: integer_validator() missing 2 args 'name' and 'value'
