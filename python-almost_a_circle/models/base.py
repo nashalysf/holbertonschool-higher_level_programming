@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module with class Base"""
 import json
+import os.path
 
 
 class Base:
@@ -65,7 +66,7 @@ class Base:
     def load_from_file(cls):
         """Returns list of instances"""
         filename = cls.__name__ + '.json'
-        if len(cls) == 0:
+        if not os.path.exists(filename):
             return '[]'
         with open(filename, 'r') as file:
             obj = Base.from_json_string(file.read())
