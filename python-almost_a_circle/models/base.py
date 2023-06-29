@@ -65,11 +65,11 @@ class Base:
     def load_from_file(cls):
         """Returns list of instances"""
         filename = cls.__name__ + '.json'
-        if len(cls) == 0:
+        if not cls or len(cls) == 0:
             return '[]'
         else:
             with open(filename, 'r') as file:
                 obj = Base.from_json_string(file.read())
-            n_list = [cls.creaye(**dictionary) for dictionary in obj]
+            n_list = [cls.create(**dictionary) for dictionary in obj]
 
             return n_list
