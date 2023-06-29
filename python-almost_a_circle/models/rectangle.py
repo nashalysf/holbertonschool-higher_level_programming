@@ -93,7 +93,7 @@ class Rectangle(Base):
         """Returns a string representation of the rectangle"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assigns new values to the rectangle attributes"""
         for i in range(len(args)):
             if i == 0:
@@ -106,3 +106,14 @@ class Rectangle(Base):
                 self.x = args[i]
             elif i == 4:
                 self.y = args[i]
+        for key, value in kwargs.items():
+            if key == 'id':
+                self.id = value
+            elif key == 'width':
+                self.width = value
+            elif key == 'height':
+                self.height = value
+            elif key == 'x':
+                self.x = value
+            elif key == 'y':
+                self.y = value
