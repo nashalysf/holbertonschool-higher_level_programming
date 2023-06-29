@@ -67,9 +67,8 @@ class Base:
         filename = cls.__name__ + '.json'
         if len(cls) == 0:
             return '[]'
-        else:
-            with open(filename, 'r') as file:
-                obj = Base.from_json_string(file.read())
-            n_list = [cls.create(**dictionary) for dictionary in obj]
+        with open(filename, 'r') as file:
+            obj = Base.from_json_string(file.read())
+        n_list = [cls.create(**dictionary) for dictionary in obj]
 
-            return n_list
+        return n_list
