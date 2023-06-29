@@ -94,7 +94,8 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args):
-        for i in range(len(args)):
+        """Assigns new values to the rectangle attributes"""
+        for i in range(args):
             if i == 0:
                 self.id = args[i]
             elif i == 1:
