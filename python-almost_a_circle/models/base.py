@@ -38,3 +38,11 @@ class Base:
             """write on file"""
             data = Base.to_json_string(tmp_list)
             file.write(data)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation"""
+        if json_string is None or len(json_string) == 0:
+            return "[]"
+        else:
+            return json.loads(json_string)
