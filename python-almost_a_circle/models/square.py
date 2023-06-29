@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Module with class Rectangle"""
 import json
-from models.base import Rectangle
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
