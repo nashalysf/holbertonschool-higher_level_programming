@@ -28,3 +28,25 @@ class Square(Rectangle):
     def __str__(self):
         """Return a string representation of Square"""
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y, self.width))
+
+    def update(self, *args, **kwargs):
+        """Assigns new values to the square attributes"""
+        for i in range(len(args)):
+            if i == 0:
+                self.id = args[i]
+            elif i == 1:
+                self.width = args[i]
+            elif i == 2:
+                self.x = args[i]
+            elif i == 3:
+                self.y = args[i]
+
+        for key, value in kwargs.items():
+            if key == 'id':
+                self.id = value
+            elif key == 'size':
+                self.width = value
+            elif key == 'x':
+                self.x = value
+            elif key == 'y':
+                self.y = value
