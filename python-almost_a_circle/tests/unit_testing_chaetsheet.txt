@@ -1,0 +1,140 @@
+----------NAMING CONVERSION-----------
+test_/
+test_filename.py
+
+
+--------ex. FUNCTIONS---------
+calc.py <-- file we want to test
+
+	def add(a,b):
+		return a + b
+
+	def sub(a,b):
+		return a - b
+
+	def mul(a,b):
+		return a * b
+
+	def div(a,b):
+		return a / b
+
+"""(hardcoded typo bug for edge case: floor division) current test will run bc test cases are whole nums (wouldnt notice bug)"""
+	def div(a,b):
+		return a // b
+""" to catch this edge case """
+	def div(a,b):
+		if b == 0:
+			raise ValueError('Cant divide by zero\n')
+		return a // b
+---------------------TEST UNITS-----------------
+test_filename.py
+
+	import unittest
+	import calc
+
+	"""Module Comment 
+
+		Test cases: A test class that inherits from 'unittest.TestCase' 
+		"""
+
+	class TestCalc(unittest.TestCase):
+		"""Functions must start with "test_" (otherwsie: "add_test") it gets skipped
+		
+			Example: testing the add function
+			"""
+
+->		if __name__ == '__main__':
+			""" Basically: If we run this module directly on cl ("python test_filename.py") then run the test code """
+				unittest.main()
+			
+
+		def test_add(self):
+			""" To use built-in functions go to documentation online ("self.assetExample") 
+				
+				Edge Cases:
+					Errors that could happen in this function
+					"""
+			
+			result = calc.add(10, 5)
+			self.assertEqual(result, 15)
+			
+							|OR|
+			
+			"""Edge Case: two postives"""
+			self.assertEqual(calc.add(10, 5), 15)
+
+			"""Edge Case: one positive & one negative"""
+			self.assertEqual(calc.add(-1, 1), 0)
+
+			"""Edge Case: two negatives """
+			self.assertEqual(calc.add(-1, -1), -2)
+
+
+		def test_sub(self):
+			""" To use built-in functions go to documentation online ("self.assetExample") 
+				
+				Edge Cases:
+					Errors that could happen in this function
+					"""
+			
+			"""Edge Case: two postives"""
+			self.assertEqual(calc.sub(10, 5), 5)
+
+			"""Edge Case: one positive & one negative"""
+			self.assertEqual(calc.sub(-1, 1), -2)
+
+			"""Edge Case: two negatives """
+			self.assertEqual(calc.sub(-1, -1), 0)
+
+
+		def test_mul(self):
+			""" To use built-in functions go to documentation online ("self.assetExample") 
+				
+				Edge Cases:
+					Errors that could happen in this function
+					"""
+			
+			"""Edge Case: two postives"""
+			self.assertEqual(calc.mul(10, 5), 50)
+
+			"""Edge Case: one positive & one negative"""
+			self.assertEqual(calc.mul(-1, 1), -1)
+
+			"""Edge Case: two negatives"""
+			self.assertEqual(calc.mul(-1, -1), 1)
+
+		
+		def test_div(self):
+					""" To use built-in functions go to documentation online ("self.assetExample") 
+						
+						Edge Cases:
+							Errors that could happen in this function
+							"""
+					
+					"""Edge Case: two postives"""
+					self.assertEqual(calc.div(10, 5), 2)
+
+					"""Edge Case: one positive & one negative"""
+					self.assertEqual(calc.div(-1, 1), -1)
+
+					"""Edge Case: two negatives"""
+					self.assertEqual(calc.mul(-1, -1), 1)
+
+					"""Edge Case: !floor division"""
+					self.assertEqual(calc.div(5,2), 2.5)
+
+					"""Testing exception:
+						
+					Reg: First value:exception expected, Second value:function to run, Third values:each argument 
+									|OR|
+					Context Manager
+					"""
+					self.assertRaises(ValueError, calc.div, 10, 0)
+									||
+					with self.assertRaises(ValueError):
+						calc.div(10, 0)
+
+
+-----------------------------CL TESTING-----------------------------
+	$python -m unittest test_filename.py
+	$python test_filename.py'
