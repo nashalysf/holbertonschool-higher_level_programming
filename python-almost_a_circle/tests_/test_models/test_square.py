@@ -1,12 +1,11 @@
 #!/usr/bin/python3
-"""Test Cases for Rectangle"""
+"""Test Cases for Square"""
 import unittest
 from models.square import Square
-from models.rectangle import Rectangle
 
 
 class TestSquare(unittest.TestCase):
-    """tests creation of rectangle based on amounts of inputs given"""
+    """tests creation of square based on amounts of inputs given"""
 
     """success"""
 
@@ -24,7 +23,7 @@ class TestSquare(unittest.TestCase):
     """All 3 values"""
 
     def test_square_creation_1(self):
-        square_3 = Rectangle(1, 2, 3)
+        square_3 = Square(1, 2, 3)
         self.assertEqual(square_3.size, 1)
         self.assertEqual(square_3.x, 2)
         self.assertEqual(square_3.y, 3)
