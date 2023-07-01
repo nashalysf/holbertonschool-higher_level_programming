@@ -9,8 +9,8 @@
 -4
 
 'positive floating'
->>> add_integer(5.5, 5.5)
-11
+>>> add_integer(5.2, 5.3)
+10.5
 
 'negative floating'
 >>> add_integer(-1.5, -1.2)
