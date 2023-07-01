@@ -1,0 +1,51 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+'positive integer'
+>>> add_integer(1, 2)
+3
+
+'negative integer'
+>>> add_integer(-3, -1)
+-4
+
+'positive floating'
+>>> add_integer(5.5, 5.5)
+11
+
+'negative floating'
+>>> add_integer(-1.5, -1.2)
+-2.7
+
+'one argument'
+>>> add_integer(2)
+100
+
+'integer and string'
+>>> add_integer(2, "3")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+'string and integer'
+>>> add_integer("3", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+'empty'
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+'a is a list'
+>>> add_integer([1, 2], 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+'a is a dict'
+>>> add_integer({1, 2}, 3)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
